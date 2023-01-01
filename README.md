@@ -1,4 +1,4 @@
-# Android News Clean Architecture
+# Android Clean Architecture Sample
 
 # Android MVI Architecture
 
