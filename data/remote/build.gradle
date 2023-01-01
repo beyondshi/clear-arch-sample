@@ -1,0 +1,43 @@
+import com.avatr.depenence.BuildVersion
+import com.avatr.depenence.Dependencies
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion BuildVersion.compileSdk
+
+    defaultConfig {
+        minSdkVersion BuildVersion.minSdk
+        targetSdkVersion BuildVersion.targetSdk
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility BuildVersion.javaVersion
+        targetCompatibility BuildVersion.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation Dependencies.okhttp3
+    api Dependencies.koinCore
+    api Dependencies.coroutinesCore
+    api Dependencies.ktorCore
+    implementation Dependencies.ktorContentNegotiation
+    implementation Dependencies.ktorSerializationKotlinxJson
+    implementation Dependencies.kotlinxSerializationJson
+    implementation Dependencies.ktorOkhttp
+    implementation Dependencies.ktorLogging
+    implementation Dependencies.chucker
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.androidAnnotation
+    implementation project(':core:network')
+}

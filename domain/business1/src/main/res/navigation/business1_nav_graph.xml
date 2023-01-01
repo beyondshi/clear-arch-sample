@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/business1_nav_graph"
+    app:startDestination="@id/newsFragment"
+    tools:ignore="InvalidNavigation">
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.avatr.business1.BaiduFragment"
+        android:label="News"
+        tools:layout="@layout/business1_baidu_fragment" />
+
+</navigation>

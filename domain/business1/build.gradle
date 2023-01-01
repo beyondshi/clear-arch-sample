@@ -1,0 +1,41 @@
+import com.avatr.depenence.BuildVersion
+import com.avatr.depenence.Dependencies
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion BuildVersion.compileSdk
+
+    defaultConfig {
+        minSdkVersion BuildVersion.minSdk
+        targetSdkVersion BuildVersion.targetSdk
+        versionCode 1
+        versionName "1.1"
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility BuildVersion.javaVersion
+        targetCompatibility BuildVersion.javaVersion
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation Dependencies.navigationFragmentKtx
+    implementation Dependencies.navigationUIKtx
+    implementation Dependencies.appcompat
+    implementation Dependencies.lifecycleViewmodelKtx
+    implementation Dependencies.koinCore
+    implementation Dependencies.koinAndroid
+    implementation project(':data:common')
+    implementation project(':utils:ui')
+}
