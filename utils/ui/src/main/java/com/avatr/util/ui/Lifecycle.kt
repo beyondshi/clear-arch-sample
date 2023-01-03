@@ -1,5 +1,7 @@
 package com.avatr.util.ui
 
+import android.app.Activity
+import android.content.Intent
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
