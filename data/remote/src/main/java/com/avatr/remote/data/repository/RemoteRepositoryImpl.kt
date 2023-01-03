@@ -7,7 +7,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.withContext
 
-internal class RemoteDataStoreImpl(
+internal class RemoteRepositoryImpl(
     private val remoteBffApi: RemoteBffApi,
 ) : RemoteRepositoryService {
     private val serviceContext = Dispatchers.Default + SupervisorJob()

@@ -6,7 +6,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.withContext
 
-class LocalDataStoreImpl(
+class LocalRepositoryImpl(
     private val baiduEntityDao: BaiduEntityDao,
 ) : LocalRepositoryService {
     private val serviceContext = Dispatchers.Default + SupervisorJob()

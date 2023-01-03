@@ -1,7 +1,7 @@
 package com.avatr.local.data
 
 import com.avatr.local.data.db.LocalDatabase
-import com.avatr.local.data.reposity.LocalDataStoreImpl
+import com.avatr.local.data.reposity.LocalRepositoryImpl
 import com.avatr.local.data.reposity.LocalRepositoryService
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.bind
@@ -12,5 +12,5 @@ val localDataModules = module {
         LocalDatabase.getInstance(androidContext()).getBaiduDao()
     }
 
-    single<LocalRepositoryService> { LocalDataStoreImpl(get()) } bind LocalRepositoryService::class
+    single<LocalRepositoryService> { LocalRepositoryImpl(get()) } bind LocalRepositoryService::class
 }

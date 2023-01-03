@@ -3,7 +3,7 @@ package com.avatr.remote.data
 import androidx.core.os.LocaleListCompat
 import com.avatr.core.network.ConnectBff
 import com.avatr.remote.data.api.RemoteBffApi
-import com.avatr.remote.data.repository.RemoteDataStoreImpl
+import com.avatr.remote.data.repository.RemoteRepositoryImpl
 import com.avatr.remote.data.repository.RemoteRepositoryService
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import io.ktor.client.HttpClient
@@ -71,7 +71,7 @@ private val remoteModules = module {
 }
 
 private val apiModules = module {
-    single<RemoteRepositoryService> { RemoteDataStoreImpl(get()) } bind RemoteRepositoryService::class
+    single<RemoteRepositoryService> { RemoteRepositoryImpl(get()) } bind RemoteRepositoryService::class
 }
 
 val remoteModuleList = remoteModules + apiModules
